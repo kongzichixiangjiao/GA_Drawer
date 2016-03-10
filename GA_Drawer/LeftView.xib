@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LeftView" customModule="GA_Drawer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7co-MQ-By8">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eat-Uw-pWR">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtT-6W-xtY">
+                                    <rect key="frame" x="8" y="24" width="77" height="76"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="77" id="o8o-zz-TT8"/>
+                                        <constraint firstAttribute="height" constant="76" id="vVI-kz-Xc6"/>
+                                    </constraints>
+                                    <state key="normal" title="1"/>
+                                    <connections>
+                                        <action selector="action:" destination="iN0-l3-epB" eventType="touchUpInside" id="fXv-BB-lzE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AM-mS-Ajl">
+                                    <rect key="frame" x="8" y="121" width="77" height="76"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="76" id="85a-Wp-T9e"/>
+                                        <constraint firstAttribute="width" constant="77" id="sLM-1k-dkw"/>
+                                    </constraints>
+                                    <state key="normal" title="2"/>
+                                    <connections>
+                                        <action selector="action:" destination="iN0-l3-epB" eventType="touchUpInside" id="l0M-Gh-njN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="4AM-mS-Ajl" firstAttribute="top" secondItem="DtT-6W-xtY" secondAttribute="bottom" constant="21" id="1q8-es-tU9"/>
+                                <constraint firstItem="4AM-mS-Ajl" firstAttribute="leading" secondItem="eat-Uw-pWR" secondAttribute="leading" constant="8" id="LcY-CW-dhC"/>
+                                <constraint firstItem="DtT-6W-xtY" firstAttribute="leading" secondItem="eat-Uw-pWR" secondAttribute="leading" constant="8" id="QeI-Av-DK3"/>
+                                <constraint firstAttribute="height" constant="1000" id="ael-PS-AlR"/>
+                                <constraint firstItem="DtT-6W-xtY" firstAttribute="top" secondItem="eat-Uw-pWR" secondAttribute="top" constant="24" id="dgq-qM-dfx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="eat-Uw-pWR" firstAttribute="centerX" secondItem="7co-MQ-By8" secondAttribute="centerX" id="13k-xG-kHk"/>
+                        <constraint firstItem="eat-Uw-pWR" firstAttribute="top" secondItem="7co-MQ-By8" secondAttribute="top" id="adl-Ma-f9Z"/>
+                        <constraint firstItem="eat-Uw-pWR" firstAttribute="leading" secondItem="7co-MQ-By8" secondAttribute="leading" id="g8R-Hf-9Iv"/>
+                        <constraint firstAttribute="bottom" secondItem="eat-Uw-pWR" secondAttribute="bottom" id="kQr-q1-VHr"/>
+                        <constraint firstAttribute="trailing" secondItem="eat-Uw-pWR" secondAttribute="trailing" id="rud-eE-2bl"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7co-MQ-By8" secondAttribute="trailing" id="5S8-40-Jxj"/>
+                <constraint firstItem="7co-MQ-By8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Aq-Kt-Kpj"/>
+                <constraint firstItem="7co-MQ-By8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UKh-vx-gLc"/>
+                <constraint firstAttribute="bottom" secondItem="7co-MQ-By8" secondAttribute="bottom" id="hyx-Vf-eDF"/>
+            </constraints>
+            <connections>
+                <outlet property="contentSizeHeight" destination="ael-PS-AlR" id="f3z-wB-m88"/>
+                <outlet property="scrollView" destination="7co-MQ-By8" id="40z-dy-TVr"/>
+            </connections>
+        </view>
+    </objects>
+</document>
