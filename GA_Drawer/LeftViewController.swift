@@ -12,7 +12,6 @@ import UIKit
 class LeftViewController: BaseViewController {
 
     @IBAction func tap(sender: UITapGestureRecognizer) {
-        print(childViewControllers)
         NSNotificationCenter.defaultCenter().postNotificationName("restore", object: self)
     }
     

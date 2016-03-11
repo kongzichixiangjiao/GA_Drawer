@@ -19,10 +19,10 @@ class LeftView: UIView {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentSizeHeight: NSLayoutConstraint!
-    typealias Handler = (tag: Int) -> ()
-    var handler: Handler!
+    typealias LeftViewHandler = (tag: Int) -> ()
+    var leftViewHandler: LeftViewHandler!
     @IBAction func action(sender: UIButton) {
-        handler(tag: sender.tag)
+        leftViewHandler(tag: sender.tag)
     }
     override func awakeFromNib() {
         self.userInteractionEnabled = true

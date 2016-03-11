@@ -8,19 +8,11 @@
 
 import UIKit
 
-private var myTag: Int = 2
-
 class ViewController: BaseViewController {
     
-    private let APPWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
-    private let APPHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
-    private let LEADING: CGFloat = UIScreen.mainScreen().bounds.size.width * 0.3
-    private let MAX_LEADING: CGFloat = UIScreen.mainScreen().bounds.size.width * 0.7
+    private var LeftViewButtonTag: Int = 2
     
-    enum DrawerState {
-        case Open, None
-    }
-    var drawerState: DrawerState = .None
+    var drawerState: themeDrawer.DrawerState = .None
     
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var leftViewWidthConstraint: NSLayoutConstraint!
@@ -30,42 +22,16 @@ class ViewController: BaseViewController {
     @IBOutlet var panGesture: UIPanGestureRecognizer!
     
     @IBAction func panGestureMethod(sender: UIPanGestureRecognizer) {
-        if drawerState == .Open {
-            return
-        }
+        if drawerState == .Open {return}
         
-        let _ = sender.view
-        //偏移Point
         let x = sender.translationInView(view).x
-        //速率Point
         let velocityX = sender.velocityInView(view).x
         
         switch sender.state {
         case .Changed:
-            switch x {
-            case 0..<LEADING :
-                mainViewleadingConstraint.constant = x
-            case LEADING..<1000 :
-                mainViewAnimation(MAX_LEADING)
-                return
-            default:
-                break
-            }
+            panGestureMethodChanged(x)
         case .Ended:
-            if velocityX > 1000 {
-                mainViewAnimation(MAX_LEADING)
-                return
-            }
-            switch x {
-            case 0..<LEADING :
-                mainViewAnimation(0)
-                break
-            case LEADING..<1000 :
-                mainViewAnimation(MAX_LEADING)
-            default:
-                break
-            }
-            print("Ended")
+            panGestureMethodEnded(x, velocityX: velocityX)
         case .Began:
             print("Began")
         default:
@@ -73,16 +39,37 @@ class ViewController: BaseViewController {
         }
     }
     
-    @IBAction func tap(sender: UITapGestureRecognizer) {
-        //        let popAnimation = POPBasicAnimation(propertyNamed: kPOPLayerPositionX)
-        //        popAnimation.toValue = 0
-        //        popAnimation.duration = 2.0
-        //        popAnimation.repeatCount = 0
-        //        mainView.layer.pop_addAnimation(popAnimation, forKey: "postionX")
-        NSNotificationCenter.defaultCenter().postNotificationName("refreshLeftVC", object: self)
+    private func panGestureMethodEnded(x: CGFloat, velocityX: CGFloat) {
+        if velocityX > MAXMAXMAX_LEADING {
+            mainViewAnimation(MAX_LEADING)
+            return
+        }
+        switch x {
+        case 0..<LEADING :
+            mainViewAnimation(0)
+            break
+        case LEADING..<MAXMAXMAX_LEADING :
+            mainViewAnimation(MAX_LEADING)
+        default:
+            break
+        }
+        print("Ended")
     }
     
-    func mainViewAnimation(constant: CGFloat) {
+    private func panGestureMethodChanged(x: CGFloat) {
+        switch x {
+        case 0..<LEADING :
+            mainViewleadingConstraint.constant = x
+        case LEADING..<MAXMAXMAX_LEADING :
+            mainViewAnimation(MAX_LEADING)
+            return
+        default:
+            break
+        }
+    }
+    
+    
+    private func mainViewAnimation(constant: CGFloat) {
         if constant == MAX_LEADING {
             drawerState = .Open
         } else {
@@ -95,6 +82,11 @@ class ViewController: BaseViewController {
             }) { (finish) -> Void in
                 
         }
+    }
+    
+    
+    @IBAction func tap(sender: UITapGestureRecognizer) {
+        NSNotificationCenter.defaultCenter().postNotificationName("refreshLeftVC", object: self)
     }
     
     override func viewDidLoad() {
@@ -110,19 +102,19 @@ class ViewController: BaseViewController {
     
     func createLeftView() {
         let v = LeftView.loadView()
-        v.handler = handler
+        v.leftViewHandler = leftViewHandler
         v.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width * 0.7, APPHeight)
         leftView.addSubview(v)
     }
     
-    lazy var handler: LeftView.Handler = {
+    lazy var leftViewHandler: LeftView.LeftViewHandler = {
         [weak self] tag in
         if let weakSelf = self {
             weakSelf.mainViewAnimation(0)
-            if myTag == tag {
+            if weakSelf.LeftViewButtonTag == tag {
                 return
             }
-            myTag = tag
+            weakSelf.LeftViewButtonTag = tag
             weakSelf.toVC(tag)
         }
     }
@@ -132,18 +124,12 @@ class ViewController: BaseViewController {
     func toVC(tag: Int) {
         var newController: UIViewController!
         if tag == 1 {
-            newController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+            newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         } else {
-            newController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         }
         let oldController = childViewControllers.last!
-        print("last", childViewControllers)
-        print("new", newController)
-        print("old", oldController)
-//        if oldController == childViewControllers[0] {
-//            return
-//        }
-
+        
         oldController.willMoveToParentViewController(nil)
         addChildViewController(newController)
         newController.view.frame = oldController.view.frame
