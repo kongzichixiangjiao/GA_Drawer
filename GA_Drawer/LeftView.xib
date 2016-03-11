@@ -18,23 +18,23 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                             <subviews>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtT-6W-xtY">
-                                    <rect key="frame" x="8" y="24" width="77" height="76"/>
+                                    <rect key="frame" x="8" y="24" width="100" height="76"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="77" id="o8o-zz-TT8"/>
+                                        <constraint firstAttribute="width" constant="100" id="o8o-zz-TT8"/>
                                         <constraint firstAttribute="height" constant="76" id="vVI-kz-Xc6"/>
                                     </constraints>
-                                    <state key="normal" title="1"/>
+                                    <state key="normal" title="详情VC 绿色"/>
                                     <connections>
                                         <action selector="action:" destination="iN0-l3-epB" eventType="touchUpInside" id="fXv-BB-lzE"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AM-mS-Ajl">
-                                    <rect key="frame" x="8" y="121" width="77" height="76"/>
+                                    <rect key="frame" x="8" y="121" width="100" height="76"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="76" id="85a-Wp-T9e"/>
-                                        <constraint firstAttribute="width" constant="77" id="sLM-1k-dkw"/>
+                                        <constraint firstAttribute="width" constant="100" id="sLM-1k-dkw"/>
                                     </constraints>
-                                    <state key="normal" title="2"/>
+                                    <state key="normal" title="主页VC"/>
                                     <connections>
                                         <action selector="action:" destination="iN0-l3-epB" eventType="touchUpInside" id="l0M-Gh-njN"/>
                                     </connections>

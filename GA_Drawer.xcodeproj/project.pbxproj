@@ -13,11 +13,11 @@
 		DC029B091C917D3A00EA7A85 /* LeftCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B081C917D3A00EA7A85 /* LeftCellView.swift */; };
 		DC029B0B1C917D5200EA7A85 /* LeftCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC029B0A1C917D5200EA7A85 /* LeftCellView.xib */; };
 		DC029B0D1C91813C00EA7A85 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B0C1C91813C00EA7A85 /* DetailViewController.swift */; };
-		DC029B0F1C91833F00EA7A85 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B0E1C91833F00EA7A85 /* BaseViewController.swift */; };
+		DC029B0F1C91833F00EA7A85 /* DrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B0E1C91833F00EA7A85 /* DrawerBaseViewController.swift */; };
 		DCD97AA01C92627A00C6F4F0 /* MyDrawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD97A9F1C92627A00C6F4F0 /* MyDrawer.storyboard */; };
 		DCD97AA21C9266B200C6F4F0 /* themeDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AA11C9266B200C6F4F0 /* themeDrawer.swift */; };
 		DCEDECAD1C91553400B3EBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECAC1C91553400B3EBE4 /* AppDelegate.swift */; };
-		DCEDECAF1C91553400B3EBE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECAE1C91553400B3EBE4 /* ViewController.swift */; };
+		DCEDECAF1C91553400B3EBE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECAE1C91553400B3EBE4 /* HomeViewController.swift */; };
 		DCEDECB21C91553400B3EBE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDECB01C91553400B3EBE4 /* Main.storyboard */; };
 		DCEDECB41C91553400B3EBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEDECB31C91553400B3EBE4 /* Assets.xcassets */; };
 		DCEDECB71C91553400B3EBE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDECB51C91553400B3EBE4 /* LaunchScreen.storyboard */; };
@@ -51,13 +51,13 @@
 		DC029B081C917D3A00EA7A85 /* LeftCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCellView.swift; sourceTree = "<group>"; };
 		DC029B0A1C917D5200EA7A85 /* LeftCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftCellView.xib; sourceTree = "<group>"; };
 		DC029B0C1C91813C00EA7A85 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DC029B0E1C91833F00EA7A85 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DC029B0E1C91833F00EA7A85 /* DrawerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBaseViewController.swift; sourceTree = "<group>"; };
 		DCBB176A1C916B460035CB40 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		DCD97A9F1C92627A00C6F4F0 /* MyDrawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyDrawer.storyboard; sourceTree = "<group>"; };
 		DCD97AA11C9266B200C6F4F0 /* themeDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = themeDrawer.swift; sourceTree = "<group>"; };
 		DCEDECA91C91553400B3EBE4 /* GA_Drawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GA_Drawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEDECAC1C91553400B3EBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCEDECAE1C91553400B3EBE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCEDECAE1C91553400B3EBE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCEDECB11C91553400B3EBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCEDECB31C91553400B3EBE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCEDECB61C91553400B3EBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 			children = (
 				DCEDECAC1C91553400B3EBE4 /* AppDelegate.swift */,
 				DCD97AA11C9266B200C6F4F0 /* themeDrawer.swift */,
-				DC029B0E1C91833F00EA7A85 /* BaseViewController.swift */,
-				DCEDECAE1C91553400B3EBE4 /* ViewController.swift */,
+				DC029B0E1C91833F00EA7A85 /* DrawerBaseViewController.swift */,
+				DCEDECAE1C91553400B3EBE4 /* HomeViewController.swift */,
 				DCEDECDA1C91558C00B3EBE4 /* LeftViewController.swift */,
 				DC029B0C1C91813C00EA7A85 /* DetailViewController.swift */,
 				DC029B041C91760D00EA7A85 /* LeftView.swift */,
@@ -365,11 +365,11 @@
 			files = (
 				DCEDECDB1C91558C00B3EBE4 /* LeftViewController.swift in Sources */,
 				DC029B091C917D3A00EA7A85 /* LeftCellView.swift in Sources */,
-				DCEDECAF1C91553400B3EBE4 /* ViewController.swift in Sources */,
+				DCEDECAF1C91553400B3EBE4 /* HomeViewController.swift in Sources */,
 				DC029B0D1C91813C00EA7A85 /* DetailViewController.swift in Sources */,
 				DCD97AA21C9266B200C6F4F0 /* themeDrawer.swift in Sources */,
 				DCEDECAD1C91553400B3EBE4 /* AppDelegate.swift in Sources */,
-				DC029B0F1C91833F00EA7A85 /* BaseViewController.swift in Sources */,
+				DC029B0F1C91833F00EA7A85 /* DrawerBaseViewController.swift in Sources */,
 				DC029B051C91760D00EA7A85 /* LeftView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

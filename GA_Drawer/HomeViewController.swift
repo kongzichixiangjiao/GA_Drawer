@@ -5,10 +5,14 @@
 //  Created by houjianan on 16/3/10.
 //  Copyright © 2016年 houjianan. All rights reserved.
 //
-
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+////////////////////更开入口 TARGET->Deployment Info->Main Interface////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 import UIKit
 
-class ViewController: BaseViewController {
+class HomeViewController: DrawerBaseViewController {
     
     private var LeftViewButtonTag: Int = 2
     
@@ -20,6 +24,37 @@ class ViewController: BaseViewController {
     @IBOutlet weak var mainViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet var panGesture: UIPanGestureRecognizer!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addNotificationObserver()
+        updateConstant()
+        createLeftView()
+    }
+    
+    lazy var leftViewHandler: LeftView.LeftViewHandler = {
+        [weak self] tag in
+        if let weakSelf = self {
+            weakSelf.mainViewAnimation(0)
+            if weakSelf.LeftViewButtonTag == tag {
+                return
+            }
+            weakSelf.LeftViewButtonTag = tag
+            weakSelf.toVC(tag)
+        }
+    }
+    
+    func action() {
+        mainViewAnimation(0)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+}
+
+extension HomeViewController {
     
     @IBAction func panGestureMethod(sender: UIPanGestureRecognizer) {
         if drawerState == .Open {return}
@@ -87,14 +122,7 @@ class ViewController: BaseViewController {
     @IBAction func tap(sender: UITapGestureRecognizer) {
         NSNotificationCenter.defaultCenter().postNotificationName("refreshLeftVC", object: self)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        addNotificationObserver()
-        updateConstant()
-        createLeftView()
-    }
+
     
     private func addNotificationObserver() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "action", name: "restore", object: nil)
@@ -112,26 +140,12 @@ class ViewController: BaseViewController {
         leftView.addSubview(v)
     }
     
-    lazy var leftViewHandler: LeftView.LeftViewHandler = {
-        [weak self] tag in
-        if let weakSelf = self {
-            weakSelf.mainViewAnimation(0)
-            if weakSelf.LeftViewButtonTag == tag {
-                return
-            }
-            weakSelf.LeftViewButtonTag = tag
-            weakSelf.toVC(tag)
-        }
-    }
-    
-    var tag = 0;
-    
     func toVC(tag: Int) {
         var newController: UIViewController!
         if tag == 1 {
             newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         } else {
-            newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+            newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         }
         let oldController = childViewControllers.last!
         
@@ -144,16 +158,6 @@ class ViewController: BaseViewController {
             newController.didMoveToParentViewController(self)
         })
     }
-    
-    func action() {
-        mainViewAnimation(0)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
 
-    
 }
 

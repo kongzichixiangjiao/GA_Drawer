@@ -9,7 +9,7 @@
 import UIKit
 
 
-class LeftViewController: BaseViewController {
+class LeftViewController: DrawerBaseViewController {
 
     @IBAction func tap(sender: UITapGestureRecognizer) {
         NSNotificationCenter.defaultCenter().postNotificationName("restore", object: self)
@@ -26,4 +26,5 @@ class LeftViewController: BaseViewController {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+    
 }

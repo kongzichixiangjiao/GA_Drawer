@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class DrawerBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.hidden = true
     }
 
     override func prefersStatusBarHidden() -> Bool {

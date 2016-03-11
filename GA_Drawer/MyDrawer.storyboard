@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-428" y="233"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="5xw-2K-cgT">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="etG-m0-32w" customClass="ViewController" customModule="GA_Drawer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="etG-m0-32w" customClass="HomeViewController" customModule="GA_Drawer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Kd-Mg-j5O"/>
                         <viewControllerLayoutGuide type="bottom" id="0r7-YC-EeY"/>
@@ -141,12 +141,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqB-Dx-wJt">
-                                <rect key="frame" x="29" y="54" width="265" height="178"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="265" id="CW8-Tv-8Sq"/>
-                                    <constraint firstAttribute="height" constant="178" id="D3I-rX-muT"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="300"/>
+                                <state key="normal" title="B">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="action:" destination="lxB-8g-wd7" eventType="touchUpInside" id="gOv-Gf-86F"/>
                                 </connections>
@@ -154,8 +153,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.4549019608" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xqB-Dx-wJt" firstAttribute="top" secondItem="6Fk-JS-0Zp" secondAttribute="bottom" constant="34" id="OqK-Sh-HsY"/>
-                            <constraint firstItem="xqB-Dx-wJt" firstAttribute="leading" secondItem="9kx-Px-7aD" secondAttribute="leading" constant="29" id="zLR-S0-zRm"/>
+                            <constraint firstItem="xqB-Dx-wJt" firstAttribute="top" secondItem="6Fk-JS-0Zp" secondAttribute="bottom" id="3Fi-1D-7Vv"/>
+                            <constraint firstAttribute="trailing" secondItem="xqB-Dx-wJt" secondAttribute="trailing" id="f6O-83-3Wf"/>
+                            <constraint firstItem="xCh-wD-oue" firstAttribute="top" secondItem="xqB-Dx-wJt" secondAttribute="bottom" id="fDe-LF-yHd"/>
+                            <constraint firstItem="xqB-Dx-wJt" firstAttribute="leading" secondItem="9kx-Px-7aD" secondAttribute="leading" id="tMz-Oh-frl"/>
                         </constraints>
                     </view>
                 </viewController>
