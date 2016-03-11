@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		C2534C102606531D17AA576B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B332D98966F5930A506669D6 /* libPods.a */; };
-		DC029B051C91760D00EA7A85 /* LeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B041C91760D00EA7A85 /* LeftView.swift */; };
-		DC029B071C91761900EA7A85 /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC029B061C91761900EA7A85 /* LeftView.xib */; };
-		DC029B091C917D3A00EA7A85 /* LeftCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B081C917D3A00EA7A85 /* LeftCellView.swift */; };
-		DC029B0B1C917D5200EA7A85 /* LeftCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC029B0A1C917D5200EA7A85 /* LeftCellView.xib */; };
-		DC029B0D1C91813C00EA7A85 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B0C1C91813C00EA7A85 /* DetailViewController.swift */; };
-		DC029B0F1C91833F00EA7A85 /* DrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC029B0E1C91833F00EA7A85 /* DrawerBaseViewController.swift */; };
-		DCD97AA01C92627A00C6F4F0 /* MyDrawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD97A9F1C92627A00C6F4F0 /* MyDrawer.storyboard */; };
-		DCD97AA21C9266B200C6F4F0 /* themeDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AA11C9266B200C6F4F0 /* themeDrawer.swift */; };
+		DCD97AB41C92896800C6F4F0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AA81C92896800C6F4F0 /* DetailViewController.swift */; };
+		DCD97AB51C92896800C6F4F0 /* DrawerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AA91C92896800C6F4F0 /* DrawerBaseViewController.swift */; };
+		DCD97AB61C92896800C6F4F0 /* GA_TopBarVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AAA1C92896800C6F4F0 /* GA_TopBarVIew.swift */; };
+		DCD97AB71C92896800C6F4F0 /* GA_TopBarVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD97AAB1C92896800C6F4F0 /* GA_TopBarVIew.xib */; };
+		DCD97AB81C92896800C6F4F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AAC1C92896800C6F4F0 /* MainViewController.swift */; };
+		DCD97AB91C92896800C6F4F0 /* LeftCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AAD1C92896800C6F4F0 /* LeftCellView.swift */; };
+		DCD97ABA1C92896800C6F4F0 /* LeftCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD97AAE1C92896800C6F4F0 /* LeftCellView.xib */; };
+		DCD97ABB1C92896800C6F4F0 /* LeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AAF1C92896800C6F4F0 /* LeftView.swift */; };
+		DCD97ABC1C92896800C6F4F0 /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD97AB01C92896800C6F4F0 /* LeftView.xib */; };
+		DCD97ABD1C92896800C6F4F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AB11C92896800C6F4F0 /* HomeViewController.swift */; };
+		DCD97ABE1C92896800C6F4F0 /* MyDrawer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD97AB21C92896800C6F4F0 /* MyDrawer.storyboard */; };
+		DCD97ABF1C92896800C6F4F0 /* themeDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD97AB31C92896800C6F4F0 /* themeDrawer.swift */; };
 		DCEDECAD1C91553400B3EBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECAC1C91553400B3EBE4 /* AppDelegate.swift */; };
-		DCEDECAF1C91553400B3EBE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECAE1C91553400B3EBE4 /* HomeViewController.swift */; };
 		DCEDECB21C91553400B3EBE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDECB01C91553400B3EBE4 /* Main.storyboard */; };
 		DCEDECB41C91553400B3EBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEDECB31C91553400B3EBE4 /* Assets.xcassets */; };
 		DCEDECB71C91553400B3EBE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEDECB51C91553400B3EBE4 /* LaunchScreen.storyboard */; };
 		DCEDECC21C91553400B3EBE4 /* GA_DrawerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECC11C91553400B3EBE4 /* GA_DrawerTests.swift */; };
 		DCEDECCD1C91553400B3EBE4 /* GA_DrawerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECCC1C91553400B3EBE4 /* GA_DrawerUITests.swift */; };
-		DCEDECDB1C91558C00B3EBE4 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDECDA1C91558C00B3EBE4 /* LeftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,18 +48,21 @@
 /* Begin PBXFileReference section */
 		6F9808266D8F48E772C745B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B332D98966F5930A506669D6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC029B041C91760D00EA7A85 /* LeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
-		DC029B061C91761900EA7A85 /* LeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftView.xib; sourceTree = "<group>"; };
-		DC029B081C917D3A00EA7A85 /* LeftCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCellView.swift; sourceTree = "<group>"; };
-		DC029B0A1C917D5200EA7A85 /* LeftCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftCellView.xib; sourceTree = "<group>"; };
-		DC029B0C1C91813C00EA7A85 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DC029B0E1C91833F00EA7A85 /* DrawerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBaseViewController.swift; sourceTree = "<group>"; };
 		DCBB176A1C916B460035CB40 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		DCD97A9F1C92627A00C6F4F0 /* MyDrawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyDrawer.storyboard; sourceTree = "<group>"; };
-		DCD97AA11C9266B200C6F4F0 /* themeDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = themeDrawer.swift; sourceTree = "<group>"; };
+		DCD97AA81C92896800C6F4F0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DCD97AA91C92896800C6F4F0 /* DrawerBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBaseViewController.swift; sourceTree = "<group>"; };
+		DCD97AAA1C92896800C6F4F0 /* GA_TopBarVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_TopBarVIew.swift; sourceTree = "<group>"; };
+		DCD97AAB1C92896800C6F4F0 /* GA_TopBarVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GA_TopBarVIew.xib; sourceTree = "<group>"; };
+		DCD97AAC1C92896800C6F4F0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DCD97AAD1C92896800C6F4F0 /* LeftCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftCellView.swift; sourceTree = "<group>"; };
+		DCD97AAE1C92896800C6F4F0 /* LeftCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftCellView.xib; sourceTree = "<group>"; };
+		DCD97AAF1C92896800C6F4F0 /* LeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
+		DCD97AB01C92896800C6F4F0 /* LeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftView.xib; sourceTree = "<group>"; };
+		DCD97AB11C92896800C6F4F0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DCD97AB21C92896800C6F4F0 /* MyDrawer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyDrawer.storyboard; sourceTree = "<group>"; };
+		DCD97AB31C92896800C6F4F0 /* themeDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = themeDrawer.swift; sourceTree = "<group>"; };
 		DCEDECA91C91553400B3EBE4 /* GA_Drawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GA_Drawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEDECAC1C91553400B3EBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCEDECAE1C91553400B3EBE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCEDECB11C91553400B3EBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCEDECB31C91553400B3EBE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCEDECB61C91553400B3EBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +73,6 @@
 		DCEDECC81C91553400B3EBE4 /* GA_DrawerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GA_DrawerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEDECCC1C91553400B3EBE4 /* GA_DrawerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GA_DrawerUITests.swift; sourceTree = "<group>"; };
 		DCEDECCE1C91553400B3EBE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCEDECDA1C91558C00B3EBE4 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		EF411B5089EFF6D42D444F58 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DCD97AA71C92891F00C6F4F0 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				DCD97AAC1C92896800C6F4F0 /* MainViewController.swift */,
+				DCD97AB11C92896800C6F4F0 /* HomeViewController.swift */,
+				DCD97AA81C92896800C6F4F0 /* DetailViewController.swift */,
+				DCD97AA91C92896800C6F4F0 /* DrawerBaseViewController.swift */,
+				DCD97AAA1C92896800C6F4F0 /* GA_TopBarVIew.swift */,
+				DCD97AAB1C92896800C6F4F0 /* GA_TopBarVIew.xib */,
+				DCD97AAD1C92896800C6F4F0 /* LeftCellView.swift */,
+				DCD97AAE1C92896800C6F4F0 /* LeftCellView.xib */,
+				DCD97AAF1C92896800C6F4F0 /* LeftView.swift */,
+				DCD97AB01C92896800C6F4F0 /* LeftView.xib */,
+				DCD97AB21C92896800C6F4F0 /* MyDrawer.storyboard */,
+				DCD97AB31C92896800C6F4F0 /* themeDrawer.swift */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
 		DCEDECA01C91553400B3EBE4 = {
 			isa = PBXGroup;
 			children = (
@@ -133,16 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				DCEDECAC1C91553400B3EBE4 /* AppDelegate.swift */,
-				DCD97AA11C9266B200C6F4F0 /* themeDrawer.swift */,
-				DC029B0E1C91833F00EA7A85 /* DrawerBaseViewController.swift */,
-				DCEDECAE1C91553400B3EBE4 /* HomeViewController.swift */,
-				DCEDECDA1C91558C00B3EBE4 /* LeftViewController.swift */,
-				DC029B0C1C91813C00EA7A85 /* DetailViewController.swift */,
-				DC029B041C91760D00EA7A85 /* LeftView.swift */,
-				DC029B061C91761900EA7A85 /* LeftView.xib */,
-				DC029B081C917D3A00EA7A85 /* LeftCellView.swift */,
-				DC029B0A1C917D5200EA7A85 /* LeftCellView.xib */,
-				DCD97A9F1C92627A00C6F4F0 /* MyDrawer.storyboard */,
+				DCD97AA71C92891F00C6F4F0 /* Drawer */,
 				DCEDECB01C91553400B3EBE4 /* Main.storyboard */,
 				DCEDECB31C91553400B3EBE4 /* Assets.xcassets */,
 				DCEDECB51C91553400B3EBE4 /* LaunchScreen.storyboard */,
@@ -285,12 +299,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD97ABE1C92896800C6F4F0 /* MyDrawer.storyboard in Resources */,
+				DCD97AB71C92896800C6F4F0 /* GA_TopBarVIew.xib in Resources */,
 				DCEDECB71C91553400B3EBE4 /* LaunchScreen.storyboard in Resources */,
 				DCEDECB41C91553400B3EBE4 /* Assets.xcassets in Resources */,
+				DCD97ABA1C92896800C6F4F0 /* LeftCellView.xib in Resources */,
 				DCEDECB21C91553400B3EBE4 /* Main.storyboard in Resources */,
-				DC029B0B1C917D5200EA7A85 /* LeftCellView.xib in Resources */,
-				DC029B071C91761900EA7A85 /* LeftView.xib in Resources */,
-				DCD97AA01C92627A00C6F4F0 /* MyDrawer.storyboard in Resources */,
+				DCD97ABC1C92896800C6F4F0 /* LeftView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,14 +378,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCEDECDB1C91558C00B3EBE4 /* LeftViewController.swift in Sources */,
-				DC029B091C917D3A00EA7A85 /* LeftCellView.swift in Sources */,
-				DCEDECAF1C91553400B3EBE4 /* HomeViewController.swift in Sources */,
-				DC029B0D1C91813C00EA7A85 /* DetailViewController.swift in Sources */,
-				DCD97AA21C9266B200C6F4F0 /* themeDrawer.swift in Sources */,
+				DCD97AB81C92896800C6F4F0 /* MainViewController.swift in Sources */,
+				DCD97AB61C92896800C6F4F0 /* GA_TopBarVIew.swift in Sources */,
+				DCD97ABF1C92896800C6F4F0 /* themeDrawer.swift in Sources */,
+				DCD97AB51C92896800C6F4F0 /* DrawerBaseViewController.swift in Sources */,
 				DCEDECAD1C91553400B3EBE4 /* AppDelegate.swift in Sources */,
-				DC029B0F1C91833F00EA7A85 /* DrawerBaseViewController.swift in Sources */,
-				DC029B051C91760D00EA7A85 /* LeftView.swift in Sources */,
+				DCD97ABB1C92896800C6F4F0 /* LeftView.swift in Sources */,
+				DCD97ABD1C92896800C6F4F0 /* HomeViewController.swift in Sources */,
+				DCD97AB41C92896800C6F4F0 /* DetailViewController.swift in Sources */,
+				DCD97AB91C92896800C6F4F0 /* LeftCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

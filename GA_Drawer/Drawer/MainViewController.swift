@@ -12,7 +12,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 import UIKit
 
-class HomeViewController: DrawerBaseViewController {
+class MainViewController: DrawerBaseViewController {
     
     private var LeftViewButtonTag: Int = 2
     
@@ -54,7 +54,7 @@ class HomeViewController: DrawerBaseViewController {
     }
 }
 
-extension HomeViewController {
+extension MainViewController {
     
     @IBAction func panGestureMethod(sender: UIPanGestureRecognizer) {
         if drawerState == .Open {return}
@@ -68,7 +68,7 @@ extension HomeViewController {
         case .Ended:
             panGestureMethodEnded(x, velocityX: velocityX)
         case .Began:
-            print("Began")
+            break
         default:
             break
         }
@@ -88,7 +88,6 @@ extension HomeViewController {
         default:
             break
         }
-        print("Ended")
     }
     
     private func panGestureMethodChanged(x: CGFloat) {
@@ -110,7 +109,7 @@ extension HomeViewController {
         } else {
             drawerState = .None
         }
-        UIView.animateKeyframesWithDuration(0.5, delay: 0, options: .CalculationModeLinear, animations: { () -> Void in
+        UIView.animateKeyframesWithDuration(0.3, delay: 0, options: .CalculationModeLinear, animations: { () -> Void in
             self.mainViewleadingConstraint.constant = constant
             self.mainView.layoutIfNeeded()
             self.mainView.superview?.layoutIfNeeded()
@@ -153,7 +152,10 @@ extension HomeViewController {
         addChildViewController(newController)
         newController.view.frame = oldController.view.frame
         
-        transitionFromViewController(oldController, toViewController: newController, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: nil, completion: { (finished) -> Void in
+        transitionFromViewController(oldController, toViewController: newController, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: nil, completion: { (finished) -> Void in
+            oldController.view.removeFromSuperview()
+            print(self.view)
+            print(oldController.view)
             oldController.removeFromParentViewController()
             newController.didMoveToParentViewController(self)
         })

@@ -19,11 +19,14 @@ class LeftView: UIView {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentSizeHeight: NSLayoutConstraint!
+    
     typealias LeftViewHandler = (tag: Int) -> ()
     var leftViewHandler: LeftViewHandler!
+    
     @IBAction func action(sender: UIButton) {
         leftViewHandler(tag: sender.tag)
     }
+    
     override func awakeFromNib() {
         self.userInteractionEnabled = true
         contentSizeHeight.constant = APPHeight + 100
