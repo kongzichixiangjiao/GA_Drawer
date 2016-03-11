@@ -84,7 +84,6 @@ class ViewController: BaseViewController {
         }
     }
     
-    
     @IBAction func tap(sender: UITapGestureRecognizer) {
         NSNotificationCenter.defaultCenter().postNotificationName("refreshLeftVC", object: self)
     }
@@ -92,15 +91,21 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "action", name: "restore", object: nil)
-        
-        mainViewWidthConstraint.constant = APPWidth
-        leftViewWidthConstraint.constant = UIScreen.mainScreen().bounds.size.width * 0.7
-        
+        addNotificationObserver()
+        updateConstant()
         createLeftView()
     }
     
-    func createLeftView() {
+    private func addNotificationObserver() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "action", name: "restore", object: nil)
+    }
+    
+    private func updateConstant() {
+        mainViewWidthConstraint.constant = APPWidth
+        leftViewWidthConstraint.constant = UIScreen.mainScreen().bounds.size.width * 0.7
+    }
+    
+    private func createLeftView() {
         let v = LeftView.loadView()
         v.leftViewHandler = leftViewHandler
         v.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width * 0.7, APPHeight)
