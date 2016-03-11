@@ -31,4 +31,8 @@ class DrawerBaseViewController: UIViewController {
     deinit {
          NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+    
+    func initViewControllerWithIdentifier(identifier: String) -> UIViewController {
+        return UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier(identifier)
+    }
 }

@@ -40,7 +40,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="4AM-mS-Ajl" firstAttribute="top" secondItem="DtT-6W-xtY" secondAttribute="bottom" constant="21" id="1q8-es-tU9"/>
                                 <constraint firstItem="4AM-mS-Ajl" firstAttribute="leading" secondItem="eat-Uw-pWR" secondAttribute="leading" constant="8" id="LcY-CW-dhC"/>

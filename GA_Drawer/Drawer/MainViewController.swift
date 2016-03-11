@@ -5,11 +5,15 @@
 //  Created by houjianan on 16/3/10.
 //  Copyright © 2016年 houjianan. All rights reserved.
 //
-///////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
-////////////////////更开入口 TARGET->Deployment Info->Main Interface////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+//--------------------------------------------------------------------------//
+//-------------更开入口 TARGET->Deployment Info->Main Interface--------------//
+//-------------------------------------------------------------------------//
+////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+
 import UIKit
 
 class MainViewController: DrawerBaseViewController {
@@ -28,6 +32,7 @@ class MainViewController: DrawerBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buildMainViewShadow()
         addNotificationObserver()
         updateConstant()
         createLeftView()
@@ -121,7 +126,13 @@ extension MainViewController {
     @IBAction func tap(sender: UITapGestureRecognizer) {
         NSNotificationCenter.defaultCenter().postNotificationName("refreshLeftVC", object: self)
     }
-
+    
+    private func buildMainViewShadow() {
+        mainView.layer.shadowColor = UIColor.blackColor().CGColor
+        mainView.layer.shadowOffset = CGSizeMake(10, 5)
+        mainView.layer.shadowOpacity = 1.2
+        mainView.layer.shadowRadius = 12
+    }
     
     private func addNotificationObserver() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "action", name: "restore", object: nil)
@@ -142,9 +153,9 @@ extension MainViewController {
     func toVC(tag: Int) {
         var newController: UIViewController!
         if tag == 1 {
-            newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+            newController = initViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         } else {
-            newController = UIStoryboard(name: themeDrawer.storyboardName, bundle: nil).instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+            newController = initViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         }
         let oldController = childViewControllers.last!
         
@@ -153,9 +164,6 @@ extension MainViewController {
         newController.view.frame = oldController.view.frame
         
         transitionFromViewController(oldController, toViewController: newController, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: nil, completion: { (finished) -> Void in
-            oldController.view.removeFromSuperview()
-            print(self.view)
-            print(oldController.view)
             oldController.removeFromParentViewController()
             newController.didMoveToParentViewController(self)
         })

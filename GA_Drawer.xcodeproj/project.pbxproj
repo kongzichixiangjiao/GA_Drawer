@@ -114,10 +114,10 @@
 		DCD97AA71C92891F00C6F4F0 /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				DCD97AA91C92896800C6F4F0 /* DrawerBaseViewController.swift */,
 				DCD97AAC1C92896800C6F4F0 /* MainViewController.swift */,
 				DCD97AB11C92896800C6F4F0 /* HomeViewController.swift */,
 				DCD97AA81C92896800C6F4F0 /* DetailViewController.swift */,
-				DCD97AA91C92896800C6F4F0 /* DrawerBaseViewController.swift */,
 				DCD97AAA1C92896800C6F4F0 /* GA_TopBarVIew.swift */,
 				DCD97AAB1C92896800C6F4F0 /* GA_TopBarVIew.xib */,
 				DCD97AAD1C92896800C6F4F0 /* LeftCellView.swift */,
